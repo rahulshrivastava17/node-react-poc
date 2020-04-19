@@ -50,15 +50,15 @@ router.post('/',[
                 id: user.id,
             }
         }
-
-       jwt.sign(payload,
-         config.get('jwtSecret'),
-         {expiresIn: 3600000}),
-         (err, token)=>{
-            if(err) throw err;
-            console.log(token)
-            res.json({token});
-        }
+       jwt.sign(
+            payload,
+            config.get('jwtSecret'),
+            {expiresIn: 360000},
+            (err, token)=>{
+                if(err) throw err;
+                res.json({token});
+            }
+        );
 
     }catch(err){
         console.log(err.message);
