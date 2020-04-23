@@ -43,10 +43,10 @@ router.post('/',[
             .json({error:[{msg:'Invalid credentials.'}]});
         }
         const payload = {
-            user:{
+            user: {
                 id: user.id,
             }
-        }
+        };
 
         jwt.sign(
             payload,
@@ -59,7 +59,7 @@ router.post('/',[
         );
 
     }catch(err){
-        console.log(err.message);
+        console.error(err.message);
         res.status(500).send('Server error');
     }
 });

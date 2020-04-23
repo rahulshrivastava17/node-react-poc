@@ -46,10 +46,11 @@ router.post('/',[
         user.password = await bcrypt.hash(password, salt);
         await user.save();
         const payload = {
-            user:{
+            user: {
                 id: user.id,
             }
-        }
+        };
+        
        jwt.sign(
             payload,
             config.get('jwtSecret'),
@@ -61,7 +62,7 @@ router.post('/',[
         );
 
     }catch(err){
-        console.log(err.message);
+        console.error(err.message);
         res.status(500).send('Server error');
     }
 });
