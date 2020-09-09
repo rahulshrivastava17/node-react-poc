@@ -10,9 +10,9 @@ const bcrypt = require('bcryptjs');
 // @route       GET api/auth
 // @desc        Authenticate user and get token
 // @access      public
-router.get('/',auth, (req, res)=> {
+router.get('/',auth, async(req, res)=> {
     try{
-        const user = User.findById(req.user.id).select('-password');
+        const user = await User.findById(req.user.id).select('-password');
         res.json(user);
     }catch(err){
         console.error(err.message);
