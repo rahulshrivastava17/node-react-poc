@@ -3,11 +3,12 @@ const request = require('request');
 const  config = require('config');
 const router = express.Router();
 const {check, validationResult} = require('express-validator/check');
+const mongoose = require('mongoose');
 
 const auth = require('../../middleware/auth');
 const Profile = require('../../models/Profile');
 const User = require('../../models/User');
-const mongoose = require('mongoose');
+const Post = require('../../models/Post');
 
 
 // @route       GET api/profile/me
@@ -44,7 +45,7 @@ router.post('/',[auth, [
     async(req, res)=>{
         const errors = validationResult(req);
         if(!errors.isEmpty()){
-            res.status(400).json({erros: errors.array()});
+            res.status(400).json({errors: errors.array()});
         }
 
         const {
@@ -146,7 +147,9 @@ router.get('/user/:user_id', async(req,res) =>{
 
 router.delete('/', auth, async(req,res) =>{
     try{
-        // Remove profile
+       // Remove user posts
+       await Post.deleteMany({user:req.user.id});
+       // Remove profile
        await Profile.findOneAndRemove({user:req.user.id});
        // Remove User
        await User.findOneAndRemove({_id:req.user.id});
