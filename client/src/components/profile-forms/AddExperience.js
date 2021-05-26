@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from 'react';
-import {Link, withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import PropsTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {addExperience} from '../../actions/profile';
@@ -57,7 +57,7 @@ const AddExperience = ({addExperience, history}) =>{
                 <input type="date" name="from" value={from} onChange={e => onChange(e)} />
                 </div>
                 <div className="form-group">
-                <p><input type="checkbox" name="current" checked={current} value="" value={current} onChange={e=>{
+                <p><input type="checkbox" name="current" checked={current}  value={current} onChange={e=>{
                     setFormData({...formData, current:!current});
                     toggleDisabled(!toDateDisabled);
                 }}/> {' '}Current Job</p>
@@ -76,7 +76,7 @@ const AddExperience = ({addExperience, history}) =>{
                 ></textarea>
                 </div>
                 <input type="submit" className="btn btn-primary my-1" />
-                <Link className="btn btn-light my-1" to="/dashboard">Go Back</Link>
+                <a className="btn btn-light my-1" to="/dashboard">Go Back</a>
             </form>
         </Fragment>
     );
@@ -86,4 +86,4 @@ AddExperience.propsTypes = {
     addExperience: PropsTypes.func.isRequired
 };
 
-export default connect(null, {addExperience})(AddExperience);
+export default connect(null, {addExperience})(withRouter(AddExperience));

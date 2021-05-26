@@ -1,4 +1,5 @@
 import axios from 'axios';
+import baseUrl from './config';
 
 const setAuthToken = token => {
     if(token) {
@@ -8,5 +9,9 @@ const setAuthToken = token => {
         delete axios.defaults.headers.common['x-auth-token'];
     }
 };
+
+export const getUrl = path => {
+    return `${baseUrl}/${path}`;
+}
 
 export default setAuthToken;
