@@ -21,7 +21,7 @@ const Profile = ({
     },[getProfileById, match.params.id]);
     return (
         <Fragment>
-            {Profile === null || loading ? <Spinner /> : <Fragment>
+            {profile === null || loading ? <Spinner /> : <Fragment>
                 <Link to='/profiles' className="btn btn-light">
                     Back To Profiles
                </Link>
@@ -37,7 +37,7 @@ const Profile = ({
                     <ProfileAbout profile={profile} />
                     <div className="profile-exp bg-white p-2">
                         <h2 className="text-primary">Experience</h2>
-                        {profile.experience.length > 0 ? (<Fragment>
+                        {profile && profile.experience.length > 0 ? (<Fragment>
                             {profile.experience.map(experience => (
                                 <ProfileExperience key={experience._id} experience={experience} />
                             ))}
@@ -48,7 +48,7 @@ const Profile = ({
                     </div>
                     <div className="profile-edu bg-white p-2">
                         <h2 className="text-primary">Education</h2>
-                        {profile.education.length > 0 ? (<Fragment>
+                        {profile && profile.education.length > 0 ? (<Fragment>
                             {profile.education.map(education => (
                                 <ProfileEducation key={education._id} education={education} />
                             ))}
@@ -57,7 +57,7 @@ const Profile = ({
                             <h4>No education credentials</h4>
                         )}
                     </div>
-                    {profile.githubusername && (
+                    {profile && profile.githubusername && (
                         <ProfileGithub username={profile.githubusername}/>
                     )}
                 </div>

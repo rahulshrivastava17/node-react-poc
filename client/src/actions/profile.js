@@ -22,6 +22,7 @@ export const getCurrentProfile = () => async dispatch => {
             payload: res.data
     });
     }catch (err) {
+    dispatch({ type: CLEAR_PROFILE });
     dispatch({
         type: PROFILE_ERROR,
         payload: { msg: err.response, status: err.response}
@@ -50,35 +51,34 @@ export const getCurrentProfile = () => async dispatch => {
 // Get All Profile by Id
 export const getProfileById = userId => async dispatch => {
    try{
-       const url = getUrl(`profile/user/${userId}`);
-       const res = await axios.get(url);
-       dispatch({
+        const url = getUrl(`profile/user/${userId}`);
+        const res = await axios.get(url);
+        dispatch({
            type: GET_PROFILE,
            payload: res.data
-   });
+        });
    }catch (err) {
-    dispatch({ type: CLEAR_PROFILE });
-   dispatch({
-       type: PROFILE_ERROR,
-       payload: { msg: err.response, status: err.response}
-   });
-}
+        dispatch({
+            type: PROFILE_ERROR,
+            payload: { msg: err.response, status: err.response}
+        });
+    }
 };
 
 // Get Github repos
 export const getGithubRepos = username => async dispatch => {
    try{
-       const url = getUrl(`profile/github/${username}`);
-       const res = await axios.get(url);
-       dispatch({
+        const url = getUrl(`profile/github/${username}`);
+        const res = await axios.get(url);
+        dispatch({
            type: GET_REPOS,
            payload: res.data
-   });
-   }catch (err) {
-       dispatch({
-           type: PROFILE_ERROR,
-           payload: { msg: err.response, status: err.response}
-       });
+        });
+   }  catch (err) {
+    //    dispatch({
+    //        type: PROFILE_ERROR,
+    //        payload: { msg: err.response, status: err.response}
+    //    });
    }
 };
 

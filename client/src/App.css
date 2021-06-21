@@ -205,6 +205,12 @@ img {
   border: #ccc solid 1px;
 }
 
+.comments .btn.btn-danger, .posts .btn.btn-danger {
+  position: absolute;
+  top: 2px;
+  right: -6px;
+}
+
 .btn:hover {
   opacity: 0.8;
 }
@@ -464,6 +470,7 @@ button {
   grid-template-columns: 1fr 4fr;
   grid-gap: 2rem;
   align-items: center;
+  position: relative;
 }
 
 .post > div:first-child {
@@ -486,6 +493,12 @@ button {
   color: #aaa;
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
+}
+.post .fa-ellipsis-v{
+  color: #AAA;
+  position: absolute;
+  right: 4px;
+  top: 4px;
 }
 
 /* Mobile Styles */
@@ -575,3 +588,4 @@ button {
     padding: 0.3rem 0.4rem;
   }
 }
+
