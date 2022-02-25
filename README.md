@@ -18,7 +18,7 @@
     
       OR
     
-    - you can setup MongoDB by installing in local as well (for that can use mongodb doc. Rref: https://www.section.io/engineering-education/nodejs-mongoosejs-mongodb/)
+    - you can setup MongoDB by installing in local as well (for that can use mongodb doc. Ref: https://www.section.io/engineering-education/nodejs-mongoosejs-mongodb/)
      
 5. Start nodejs server for the API: "npm start" or "node server" (Run this command inside "node-react-poc" location)
 6. Start React app: "npm start" (Run this command inside "node-react-poc/client" location)
