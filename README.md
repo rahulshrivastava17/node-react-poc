@@ -14,8 +14,10 @@
               - click on connect then popup will be displayed
               - then click on second option "Connect your application" 
               - Copy code ex: mongodb+srv://rahul123:<password>@devconnector.buerg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-              - Replace password which you have created using "Database access" option in side menu section. 
+              - Replace password which you have created using "Database access" option in side menu section.
+    
       OR
+    
     - you can setup MongoDB by installing in local as well (for that can use mongodb doc. Rref: https://www.section.io/engineering-education/nodejs-mongoosejs-mongodb/)
      
 5. Start nodejs server for the API: "npm start" or "node server" (Run this command inside "node-react-poc" location)
