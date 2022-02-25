@@ -16,6 +16,7 @@
               - Copy code ex: mongodb+srv://rahul123:<password>@devconnector.buerg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
               - Replace password which you have created using "Database access" option in side menu section.
     
+    
       OR
     
     - you can setup MongoDB by installing in local as well (for that can use mongodb doc. Ref: https://www.section.io/engineering-education/nodejs-mongoosejs-mongodb/)
