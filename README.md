@@ -2,18 +2,18 @@
 To Setup app follow the following steps:
 1. git clone https://github.com/rahulshrivastava17/node-react-poc.git
 2. To install nodejs dependencies:
-    -Get inside "node-react-poc" then run "npm install"
-3. To install ReactJs dependencies
-    -Get inside "node-react-poc/client" folder then run "npm install"
+    -Get inside "node-react-poc" then run "npm install".
+3. To install ReactJs dependencies.
+    -Get inside "node-react-poc/client" folder then run "npm install".
 4. Setup Database
     - Using Mongodb cloud
         - Signup and Login in https://account.mongodb.com/account/login?signedOut=true
         - Setup database on mongoDB cloud by following Docs: https://docs.atlas.mongodb.com/tutorial/create-atlas-account/
         - Change "mongoURI" in default.json file.
-           - To Copy mongo URI from Mongodb Cloud follow the following steps
+           - To Copy mongo URI from Mongodb Cloud follow the following steps:
             
-              - Click on connect then popup will be displayed
-              - Then click on second option "Connect your application" 
+              - Click on connect then popup will be displayed.
+              - Then click on second option "Connect your application".
               - Copy code ex: mongodb+srv://rahul123:<password>@devconnector.buerg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
               - Replace "password" and "myFirstDatabase" in copied URL which you have created using "Database access" option in side menu section.
     
@@ -21,9 +21,10 @@ To Setup app follow the following steps:
       OR
     
     - you can setup MongoDB by installing in local as well (for that can use mongodb doc. Ref: https://www.section.io/engineering-education/nodejs-mongoosejs-mongodb/)
-     
-5. Start nodejs server (To run API's): Run "npm start" or "node server" (Run this command inside "node-react-poc" location)
-6. Start React app: Run "npm start" (Run this command inside "node-react-poc/client" location)
+    
+6. Change "githubClientId" and "githubSecret" in "default.josn". To get "githubClientId" and "githubSecret" create account in github (This is being used to get github details of any valid github url )
+5. Start nodejs server (To run API's): Run "npm start" or "node server" (Run this command inside "node-react-poc" location).
+6. Start React app: Run "npm start" (Run this command inside "node-react-poc/client" location).
 
     
 # Features of the App
