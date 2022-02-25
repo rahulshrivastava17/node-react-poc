@@ -25,3 +25,11 @@
 5. Start nodejs server (To run API's): Run "npm start" or "node server" (Run this command inside "node-react-poc" location)
 6. Start React app: Run "npm start" (Run this command inside "node-react-poc/client" location)
 
+   ** Features of the App**
+- SignIn/ SignUp 
+- Create/Edit/Delete/View Profle
+- Add/Delete Qualifications
+- Add/Delete Experiences
+- Add/Delete Posts
+- Like/ Dislike
+- Reply to post
