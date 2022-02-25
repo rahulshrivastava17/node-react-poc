@@ -7,7 +7,7 @@
     -Get inside "node-react-poc/client" folder then run "npm install"
 4. Setup Database
     -Using Mongodb cloud
-
+    
         - Signup and Login in https://account.mongodb.com/account/login?signedOut=true
         - Setup database on mongoDB cloud by following https://docs.atlas.mongodb.com/tutorial/create-atlas-account/
         - Change "mongoURI" in default.json
