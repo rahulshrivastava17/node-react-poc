@@ -27,10 +27,10 @@
 
     
 # Features of the App
-    - SignIn/ SignUp 
-    - Create/Edit/Delete/View Profle
-    - Add/Delete Qualifications
-    - Add/Delete Experiences
-    - Add/Delete Posts
-    - Like/ Dislike
-    - Reply to post
+- SignIn/ SignUp 
+- Create/Edit/Delete/View Profle
+- Add/Delete Qualifications
+- Add/Delete Experiences
+- Add/Delete Posts
+- Like/ Dislike
+- Reply to post
