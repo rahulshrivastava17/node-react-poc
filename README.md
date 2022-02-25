@@ -15,7 +15,7 @@ To Setup app follow the following steps:
               - Click on connect then popup will be displayed
               - Then click on second option "Connect your application" 
               - Copy code ex: mongodb+srv://rahul123:<password>@devconnector.buerg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-              - Replace "password" and "myFirstDatabase" which you have created using "Database access" option in side menu section.
+              - Replace "password" and "myFirstDatabase" in copied URL which you have created using "Database access" option in side menu section.
     
     
       OR
