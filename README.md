@@ -9,7 +9,7 @@
     - Using Mongodb cloud
         - Signup and Login in https://account.mongodb.com/account/login?signedOut=true
         - Setup database on mongoDB cloud by following Docs: https://docs.atlas.mongodb.com/tutorial/create-atlas-account/
-        - Change "mongoURI" in default.json
+        - Change "mongoURI" in default.json file.
             To Copy mongo URI from Mongodb Cloud follow the following steps
               - click on connect then popup will be displayed
               - then click on second option "Connect your application" 
