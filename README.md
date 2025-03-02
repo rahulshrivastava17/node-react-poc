@@ -1,4 +1,4 @@
-# node-react-poc: (Job Profile APP)
+# Job Profile APP: (NodeJS/ ReactJS)
 To Setup app follow the following steps:
 1. git clone https://github.com/rahulshrivastava17/node-react-poc.git
 2. To install nodejs dependencies:
